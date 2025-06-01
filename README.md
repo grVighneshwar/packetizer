@@ -3,21 +3,6 @@
 
 This repository contains a Verilog implementation of a UART transmitter synthesized using open-source tools. The design includes a FIFO buffer and a finite state machine (FSM) controller that handles data serialization and transmission timing.
 
-## Repository Structure
-
-```
-uart_transmitter/
-├── rtl2/                     # Verilog source files
-│   ├── uart_transmitter.v   # Top-level module
-│   ├── packetizer_fsm.v     # FSM controller with baud rate generator
-│   └── fifo.v               # FIFO buffer implementation
-├── synth/                   # Synthesis output files
-│   └── uart_transmitter_synth.v
-├── testbench/               # Simulation testbench
-│   └── tb_uart_transmitter.v
-└── README.md                # This file
-```
-
 ## Design Overview
 
 The UART transmitter consists of two main components:
