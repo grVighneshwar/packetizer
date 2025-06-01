@@ -1,0 +1,9 @@
+# Synthesis script for UART Transmitter
+read_verilog uart_transmitter.v
+read_verilog packetizer_fsm.v
+read_verilog fifo.v
+hierarchy -check -top uart_transmitter
+proc; opt; memory; opt; fsm; opt
+techmap; opt
+write_verilog synth_uart_transmitter.v
+show -format png -prefix uart_synth  # Generate schematic
